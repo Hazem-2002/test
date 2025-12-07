@@ -17,156 +17,208 @@
         <script defer src="js/script.js"></script>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg bg-body-tertiar shadow fixed-top">
-            <div class="container-fluid px-4 px-lg-3 px-xl-4">
-                <img src="images/logo.png" alt="Tasty Bites Logo" width="32" height="32">
-                <a class="navbar-brand text-capitalize ms-2 fw-bold" href="#">tasty bites</a>
-                <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+        <header>
+            <nav class="navbar navbar-expand-lg bg-body-tertiar shadow fixed-top">
+                <div class="container-fluid px-4 px-lg-3 px-xl-4">
+                    <img src="images/logo.png" alt="Tasty Bites Logo" width="32" height="32">
+                    <a class="navbar-brand text-capitalize ms-2 fw-bold" href="#">tasty bites</a>
+                    <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse my-2 my-lg-0" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 ms-1 ps-1 mb-lg-0 border-start ">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">About Us</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Menu
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Burgers</a></li>
+                                    <li><a class="dropdown-item" href="#">Pizza</a></li>
+                                    <li><a class="dropdown-item" href="#">Chicken</a></li>
+                                    <li><a class="dropdown-item" href="#">Sandwiches</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">Meals</a></li>
+                                    <li><a class="dropdown-item" href="#">Salads</a></li>
+                                    <li><a class="dropdown-item" href="#">Drinks</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input class="form-control shadow-sm border me-3 px-3 rounded-pill" type="search" placeholder="Search" aria-label="Search"/>
+                            <button class="btn btn-warning shadow-sm me-2 px-3 rounded-pill" type="submit">Search</button>
+                            <button class="btn btn-outline-warning shadow-sm px-3 rounded-pill" type="button" data-bs-toggle="modal" data-bs-target="#login-form">Login</button>
+                            <div class="modal fade" id="login-form" tabindex="-1">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content rounded-4 p-2">
+                                        <div class="modal-header border-0">
+                                            <h5 class="modal-title text-capitalize fw-semibold">login</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div><!-- modal-header -->
+                                        <div class="modal-body">
+                                            <div class="mb-2">
+                                                <label for="email-field" class="form-label text-capitalize">email address</label>
+                                                <input class="form-control" type="email" id="email-field">
+                                            </div>
+                                            <div class="mb-2">
+                                                <label for="password-field" class="form-label text-capitalize mt-3">password</label>
+                                                <input class="form-control" type="password" id="password-field">
+                                            </div>
+                                            <div class="form-check mt-3">
+                                                <input type="checkbox" class="form-check-input shadow-none border-1" id="remember-check">
+                                                <label for="remember-check" class="text-capitalize">remember me</label>
+                                            </div><!-- form-check -->
+                                        </div><!-- modal-body -->
+                                        <div class="modal-footer border-0">
+                                            <button type="button" class="btn rounded-4 border-0 w-100 text-capitalize">login</button>
+                                        </div><!-- modal-footer -->
+                                    </div><!-- modal-content -->
+                                </div><!-- modal-dialog -->
+                            </div><!-- modal -->
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <!-- Carousel -->
+            <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+                <!-- Indicators/dots -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active rounded-circle mx-1" style="width: 9px; height:9px;"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="1" class="rounded-circle mx-1" style="width: 9px; height:9px;"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="2" class="rounded-circle mx-1" style="width: 9px; height:9px;"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="3" class="rounded-circle mx-1" style="width: 9px; height:9px;"></button>
+                </div>
+            
+                <!-- The slideshow/carousel -->
+                <div class="carousel-inner w-100 vh-100">
+                    <div class="carousel-item active">
+                        <div class="container-fluid">
+                            <div class="row justify-content-center justify-content-lg-end vh-100">
+                                <div class="col-12 col-sm-10 col-md-8 col-lg-6 d-flex align-items-center vh-100">
+                                    <img src="images/burgers.png" alt="Delicious Burgers" class="w-100">
+                                </div><!-- col -->
+                            </div><!-- row -->
+                        </div><!-- container-fluid -->
+                    
+                        <div class="carousel-caption custom-caption text-lg-start text-center ms-lg-3 mb-5">
+                            <h1 class="fw-bold mb-3">Fresh & Delicious<br>Fast Food</h1>
+                            <p class="mb-4">Taste the best burgers, crispy fries, and refreshing drinks — made just for you.</p>
+                            <div>
+                                <a href="#" class="btn btn-warning px-4 py-2 me-2 fw-semibold">Order Now</a>
+                                <a href="#" class="btn btn-outline-light px-4 py-2 fw-semibold">View Menu</a>
+                            </div>
+                        </div><!-- carousel-caption -->
+                    </div><!-- carousel-item -->
+
+                    <div class="carousel-item">
+                        <div class="container-fluid">
+                            <div class="row justify-content-center justify-content-lg-end vh-100">
+                                <div class="col-12 col-sm-10 col-md-8 col-lg-6 me-lg-4 d-flex align-items-center vh-100">
+                                    <img src="images/pizza.png" alt="Delicious Burgers" class="w-100">
+                                </div><!-- col -->
+                            </div><!-- row -->
+                        </div><!-- container-fluid -->
+                    
+                        <div class="carousel-caption custom-caption text-lg-start text-center ms-lg-3 mb-5">
+                            <h1 class="fw-bold mb-3">Hot & Cheesy<br>Italian Pizza</h1>
+                            <p class="mb-4">Enjoy freshly baked pizza loaded with cheese, pepperoni, and rich flavors — straight from the oven.</p>
+                            <div>
+                                <a href="#" class="btn btn-warning px-4 py-2 me-2 fw-semibold">Order Now</a>
+                                <a href="#" class="btn btn-outline-light px-4 py-2 fw-semibold">View Menu</a>
+                            </div>
+                        </div><!-- carousel-caption -->
+                    </div><!-- carousel-item -->
+
+                    <div class="carousel-item">
+                        <div class="container-fluid">
+                            <div class="row justify-content-center justify-content-lg-end vh-100">
+                                <div class="col-12 col-sm-10 col-md-8 col-lg-6 me-lg-3 d-flex align-items-center vh-100">
+                                    <img src="images/fried-chicken.png" alt="Delicious Burgers" class="w-100">
+                                </div><!-- col -->
+                            </div><!-- row -->
+                        </div><!-- container-fluid -->
+                    
+                        <div class="carousel-caption custom-caption text-lg-start text-center ms-lg-3 mb-5">
+                            <h1 class="fw-bold mb-3">Crispy & Juicy<br>Fried Chicken</h1>
+                            <p class="mb-4">Enjoy golden, crunchy fried chicken with rich flavor and perfect seasoning — freshly cooked for you.</p>
+                            <div>
+                                <a href="#" class="btn btn-warning px-4 py-2 me-2 fw-semibold">Order Now</a>
+                                <a href="#" class="btn btn-outline-light px-4 py-2 fw-semibold">View Menu</a>
+                            </div>
+                        </div><!-- carousel-caption -->
+                    </div><!-- carousel-item -->
+
+                    <div class="carousel-item">
+                        <div class="container-fluid">
+                            <div class="row justify-content-center justify-content-lg-end vh-100">
+                                <div class="col-12 col-sm-10 col-md-8 col-lg-5 me-lg-5 d-flex align-items-center vh-100">
+                                    <img src="images/donut.png" alt="Delicious Burgers" class="w-100">
+                                </div><!-- col -->
+                            </div><!-- row -->
+                        </div><!-- container-fluid -->
+                    
+                        <div class="carousel-caption custom-caption text-lg-start text-center ms-lg-3 mb-5">
+                            <h1 class="fw-bold mb-3">Sweet & Fresh<br>Chocolate Donuts</h1>
+                            <p class="mb-4">Treat yourself to soft, delicious donuts coated in rich chocolate and colorful sprinkles.</p>
+                            <div>
+                                <a href="#" class="btn btn-warning px-4 py-2 me-2 fw-semibold">Order Now</a>
+                                <a href="#" class="btn btn-outline-light px-4 py-2 fw-semibold">View Menu</a>
+                            </div>
+                        </div><!-- carousel-caption -->
+                    </div><!-- carousel-item -->
+                </div><!-- carousel-inner -->
+
+                <!-- Left and right controls/icons -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                    <span><i class="fa-solid fa-chevron-left"></i></span>
                 </button>
-                <div class="collapse navbar-collapse my-2 my-lg-0" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 ms-1 ps-1 mb-lg-0 border-start ">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About Us</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Menu
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Burgers</a></li>
-                                <li><a class="dropdown-item" href="#">Pizza</a></li>
-                                <li><a class="dropdown-item" href="#">Chicken</a></li>
-                                <li><a class="dropdown-item" href="#">Sandwiches</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#">Meals</a></li>
-                                <li><a class="dropdown-item" href="#">Salads</a></li>
-                                <li><a class="dropdown-item" href="#">Drinks</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
-                        </li>
+                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                    <span><i class="fa-solid fa-chevron-right"></i></span>
+                </button>
+            </div><!-- Carousel -->
+        </main>
+        <section class="welcome-section">
+            <div class="container-lg">
+                <div class="welcome-content">
+                    <h2 class="title">Welcome to Tasty Bites — Taste the Difference</h2>
+                
+                    <p>
+                        Welcome to <strong>Tasty Bites</strong>, where every meal is made with passion,
+                        premium ingredients, and unforgettable flavor. Whether you're craving a juicy
+                        handcrafted burger, oven-baked pizza, crispy fries, or a fresh colorful salad —
+                        Tasty Bites brings you comfort food done right.
+                    </p>
+
+                    <p>
+                        Sit back, relax, and enjoy a dining experience designed to satisfy every craving.
+                    </p>
+                
+                    <ul class="features">
+                        <li> <i class="fas fa-check-circle"></i> Fresh Ingredients Only</li>
+                        <li> <i class="fas fa-check-circle"></i> Cooked-to-Order Meals</li>
+                        <li> <i class="fas fa-check-circle"></i> Fast Service</li>
+                        <li> <i class="fas fa-check-circle"></i> Signature Sauces & Recipes</li>
+                        <li> <i class="fas fa-check-circle"></i> Healthy Options Available</li>
                     </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control shadow-sm border me-3 px-3 rounded-pill" type="search" placeholder="Search" aria-label="Search"/>
-                        <button class="btn btn-warning shadow-sm me-2 px-3 rounded-pill" type="submit">Search</button>
-                        <button class="btn btn-outline-warning shadow-sm px-3 rounded-pill" type="button" data-bs-toggle="modal" data-bs-target="#login-form">Login</button>
-                        <div class="modal fade" id="login-form" tabindex="-1">
-                            <div class="modal-dialog modal-dialog-centered">
-                                <div class="modal-content rounded-4 p-2">
-                                    <div class="modal-header border-0">
-                                        <h5 class="modal-title text-capitalize fw-semibold">login</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div><!-- modal-header -->
-                                    <div class="modal-body">
-                                        <div class="mb-2">
-                                            <label for="email-field" class="form-label text-capitalize">email address</label>
-                                            <input class="form-control" type="email" id="email-field">
-                                        </div>
-                                        <div class="mb-2">
-                                            <label for="password-field" class="form-label text-capitalize mt-3">password</label>
-                                            <input class="form-control" type="password" id="password-field">
-                                        </div>
-                                        <div class="form-check mt-3">
-                                            <input type="checkbox" class="form-check-input shadow-none border-1" id="remember-check">
-                                            <label for="remember-check" class="text-capitalize">remember me</label>
-                                        </div><!-- form-check -->
-                                    </div><!-- modal-body -->
-                                    <div class="modal-footer border-0">
-                                        <button type="button" class="btn rounded-4 border-0 w-100 text-capitalize">login</button>
-                                    </div><!-- modal-footer -->
-                                </div><!-- modal-content -->
-                            </div><!-- modal-dialog -->
-                        </div><!-- modal -->
-                    </form>
+                
+                    <a href="#" class="btn-order">Order Now</a>
+                    <a href="#" class="btn-explore">View Menu</a>
                 </div>
             </div>
-        </nav>
+        </section>
 
-        <!-- Carousel -->
-        <div id="demo" class="carousel slide" data-bs-ride="carousel">
-
-            <!-- Indicators/dots -->
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active rounded-circle mx-1" style="width: 9px; height:9px;"></button>
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="1" class="rounded-circle mx-1" style="width: 9px; height:9px;"></button>
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="2" class="rounded-circle mx-1" style="width: 9px; height:9px;"></button>
-                <!-- <button type="button" data-bs-target="#demo" data-bs-slide-to="3" class="rounded-circle mx-1" style="width: 9px; height:9px;"></button> -->
-            </div>
-        
-            <!-- The slideshow/carousel -->
-            <div class="carousel-inner w-100 vh-100">
-                <div class="carousel-item active">
-                    <div class="container-fluid">
-                        <div class="row justify-content-center justify-content-lg-end vh-100">
-                            <div class="col-12 col-sm-10 col-md-8 col-lg-6 d-flex align-items-center vh-100">
-                                <img src="images/burgers.png" alt="Delicious Burgers" class="w-100">
-                            </div><!-- col -->
-                        </div><!-- row -->
-                    </div><!-- container-fluid -->
-                
-                    <div class="carousel-caption custom-caption text-lg-start text-center ms-lg-3 mb-5">
-                        <h1 class="fw-bold mb-3">Fresh & Delicious<br>Fast Food</h1>
-                        <p class="mb-4">Taste the best burgers, crispy fries, and refreshing drinks — made just for you.</p>
-                        <div>
-                            <a href="#" class="btn btn-warning px-4 py-2 me-2 fw-semibold">Order Now</a>
-                            <a href="#" class="btn btn-outline-light px-4 py-2 fw-semibold">View Menu</a>
-                        </div>
-                    </div><!-- carousel-caption -->
-                </div><!-- carousel-item -->
-
-                <div class="carousel-item">
-                    <div class="container-fluid">
-                        <div class="row justify-content-center justify-content-lg-end vh-100">
-                            <div class="col-12 col-sm-10 col-md-8 col-lg-6 me-lg-4 d-flex align-items-center vh-100">
-                                <img src="images/pizza.png" alt="Delicious Burgers" class="w-100">
-                            </div><!-- col -->
-                        </div><!-- row -->
-                    </div><!-- container-fluid -->
-                
-                    <div class="carousel-caption custom-caption text-lg-start text-center ms-lg-3 mb-5">
-                        <h1 class="fw-bold mb-3">Hot & Cheesy<br>Italian Pizza</h1>
-                        <p class="mb-4">Enjoy freshly baked pizza loaded with cheese, pepperoni, and rich flavors — straight from the oven.</p>
-                        <div>
-                            <a href="#" class="btn btn-warning px-4 py-2 me-2 fw-semibold">Order Now</a>
-                            <a href="#" class="btn btn-outline-light px-4 py-2 fw-semibold">View Menu</a>
-                        </div>
-                    </div><!-- carousel-caption -->
-                </div><!-- carousel-item -->
-
-                <div class="carousel-item">
-                    <div class="container-fluid">
-                        <div class="row justify-content-center justify-content-lg-end vh-100">
-                            <div class="col-12 col-sm-10 col-md-8 col-lg-6 me-lg-3 d-flex align-items-center vh-100">
-                                <img src="images/fried-chicken.png" alt="Delicious Burgers" class="w-100">
-                            </div><!-- col -->
-                        </div><!-- row -->
-                    </div><!-- container-fluid -->
-                
-                    <div class="carousel-caption custom-caption text-lg-start text-center ms-lg-3 mb-5">
-                        <h1 class="fw-bold mb-3">Crispy & Juicy<br>Fried Chicken</h1>
-                        <p class="mb-4">Enjoy golden, crunchy fried chicken with rich flavor and perfect seasoning — freshly cooked for you.</p>
-                        <div>
-                            <a href="#" class="btn btn-warning px-4 py-2 me-2 fw-semibold">Order Now</a>
-                            <a href="#" class="btn btn-outline-light px-4 py-2 fw-semibold">View Menu</a>
-                        </div>
-                    </div><!-- carousel-caption -->
-                </div><!-- carousel-item -->
-            </div><!-- carousel-inner -->
-
-            <!-- Left and right controls/icons -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-                <span><i class="fa-solid fa-chevron-left"></i></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-                <span><i class="fa-solid fa-chevron-right"></i></span>
-            </button>
-        </div><!-- Carousel -->
     </body>
 </html>
