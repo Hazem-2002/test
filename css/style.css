@@ -5,14 +5,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.modal {
-    z-index: 999;
-}
-
-.modal-backdrop {
-    z-index: 990;
-}
-
 .navbar .navbar-brand {
     font-size: 22px;
     color: #e63909 !important;  
@@ -41,6 +33,14 @@ nav .form-control:focus {
     box-shadow: 0 0 0 0.15rem rgba(255, 193, 7, .4) !important;
 }
 
+.modal {
+    z-index: 999;
+}
+
+.modal-backdrop {
+    z-index: 990;
+}
+
 .modal-title {
     font-size: 1.3rem;
     color: #e63909;
@@ -55,30 +55,25 @@ nav .form-control:focus {
 .modal-body input.form-check-input:checked {
     background-color: #ffc107 ;
 }
+
 .modal-body input.form-check-input {
     border: 1px solid #ccc;
 }
+
 .modal-footer .btn {
     background: linear-gradient(45deg, #ff9c07, #ff4b1f);
     font-size: 1rem;
 }
 
 .modal-footer .btn:hover {
-    opacity: 0.9;
+    opacity: 0.85;
 }
 
-.carousel {
-    background: url(../images/background.png) no-repeat;
-    background-size: 100% 100%;
-}
+/* ////////////////////////////////////////////////////////////////////////// */
 
 .carousel-inner .carousel-item {
     background: linear-gradient(to bottom,#ffffff 0%,#ffffff 60%,#f9d186 85%, #f4a52a 100%
     );
-}
-
-.carousel-inner .carousel-item .container-fluid .row {
-    height: 100vh;
 }
 
 .carousel-item img{
@@ -103,8 +98,6 @@ nav .form-control:focus {
     }
 }
 
-
-
 .custom-caption {
     position: absolute;
     top: 50%;
@@ -117,7 +110,7 @@ nav .form-control:focus {
 .custom-caption h1 {
     font-size: 3rem;
     line-height: 1.2;
-    color: #ff4b1f; /* برتقالي ناري */
+    color: #ff4b1f; 
 }
 
 .custom-caption p {
@@ -146,18 +139,18 @@ nav .form-control:focus {
     }
 
     .custom-caption {
-    position: absolute;
-    top: auto;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    padding: 20px;
-    max-width: none;
+        position: absolute;
+        top: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        padding: 20px;
+        max-width: none;
 
-    background: rgba(255, 255, 255, 0.15); 
-    backdrop-filter: blur(8px); 
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.25);
+        background: rgba(255, 255, 255, 0.15); 
+        backdrop-filter: blur(8px); 
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.25);
     }
 
     .custom-caption h1 {
