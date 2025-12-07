@@ -17,7 +17,7 @@
         <script defer src="js/script.js"></script>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary shadow fixed-top">
+        <nav class="navbar navbar-expand-lg bg-body-tertiar shadow fixed-top">
             <div class="container-fluid px-4 px-lg-3 px-xl-4">
                 <img src="images/logo.png" alt="Tasty Bites Logo" width="32" height="32">
                 <a class="navbar-brand text-capitalize ms-2 fw-bold" href="#">tasty bites</a>
@@ -54,9 +54,9 @@
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
-                        <input class="form-control shadow-none border-0 me-3 px-3 rounded-pill" type="search" placeholder="Search" aria-label="Search"/>
-                        <button class="btn btn-warning me-2 px-3 rounded-pill" type="submit">Search</button>
-                        <button class="btn btn-outline-warning px-3 rounded-pill" type="button" data-bs-toggle="modal" data-bs-target="#login-form">Login</button>
+                        <input class="form-control shadow-sm border me-3 px-3 rounded-pill" type="search" placeholder="Search" aria-label="Search"/>
+                        <button class="btn btn-warning shadow-sm me-2 px-3 rounded-pill" type="submit">Search</button>
+                        <button class="btn btn-outline-warning shadow-sm px-3 rounded-pill" type="button" data-bs-toggle="modal" data-bs-target="#login-form">Login</button>
                         <div class="modal fade" id="login-form" tabindex="-1">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content rounded-4 p-2">
@@ -95,15 +95,14 @@
             <!-- Indicators/dots -->
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active rounded-circle mx-1" style="width: 9px; height:9px;"></button>
-                <!-- <button type="button" data-bs-target="#demo" data-bs-slide-to="1" class="rounded-circle mx-1" style="width: 9px; height:9px;"></button> -->
-                <!-- <button type="button" data-bs-target="#demo" data-bs-slide-to="2" class="rounded-circle mx-1" style="width: 9px; height:9px;"></button> -->
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="1" class="rounded-circle mx-1" style="width: 9px; height:9px;"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="2" class="rounded-circle mx-1" style="width: 9px; height:9px;"></button>
                 <!-- <button type="button" data-bs-target="#demo" data-bs-slide-to="3" class="rounded-circle mx-1" style="width: 9px; height:9px;"></button> -->
             </div>
         
             <!-- The slideshow/carousel -->
             <div class="carousel-inner w-100 vh-100">
                 <div class="carousel-item active">
-        
                     <div class="container-fluid">
                         <div class="row justify-content-center justify-content-lg-end vh-100">
                             <div class="col-12 col-sm-10 col-md-8 col-lg-6 d-flex align-items-center vh-100">
@@ -112,9 +111,47 @@
                         </div><!-- row -->
                     </div><!-- container-fluid -->
                 
-                    <div class="carousel-caption custom-caption text-lg-start text-center mb-5">
+                    <div class="carousel-caption custom-caption text-lg-start text-center ms-lg-3 mb-5">
                         <h1 class="fw-bold mb-3">Fresh & Delicious<br>Fast Food</h1>
                         <p class="mb-4">Taste the best burgers, crispy fries, and refreshing drinks — made just for you.</p>
+                        <div>
+                            <a href="#" class="btn btn-warning px-4 py-2 me-2 fw-semibold">Order Now</a>
+                            <a href="#" class="btn btn-outline-light px-4 py-2 fw-semibold">View Menu</a>
+                        </div>
+                    </div><!-- carousel-caption -->
+                </div><!-- carousel-item -->
+
+                <div class="carousel-item">
+                    <div class="container-fluid">
+                        <div class="row justify-content-center justify-content-lg-end vh-100">
+                            <div class="col-12 col-sm-10 col-md-8 col-lg-6 me-4 d-flex align-items-center vh-100">
+                                <img src="images/pizza.png" alt="Delicious Burgers" class="w-100">
+                            </div><!-- col -->
+                        </div><!-- row -->
+                    </div><!-- container-fluid -->
+                
+                    <div class="carousel-caption custom-caption text-lg-start text-center ms-lg-3 mb-5">
+                        <h1 class="fw-bold mb-3">Hot & Cheesy<br>Italian Pizza</h1>
+                        <p class="mb-4">Enjoy freshly baked pizza loaded with cheese, pepperoni, and rich flavors — straight from the oven.</p>
+                        <div>
+                            <a href="#" class="btn btn-warning px-4 py-2 me-2 fw-semibold">Order Now</a>
+                            <a href="#" class="btn btn-outline-light px-4 py-2 fw-semibold">View Menu</a>
+                        </div>
+                    </div><!-- carousel-caption -->
+                </div><!-- carousel-item -->
+
+                <div class="carousel-item">
+                    <div class="container-fluid">
+                        <div class="row justify-content-center justify-content-lg-end vh-100">
+                            <div class="col-12 col-sm-10 col-md-8 col-lg-6 me-2 d-flex align-items-center vh-100">
+                                <img src="images/fried-chicken.png" alt="Delicious Burgers" class="w-100">
+                            </div><!-- col -->
+                        </div><!-- row -->
+                    </div><!-- container-fluid -->
+                
+                    <div class="carousel-caption custom-caption text-lg-start text-center ms-lg-3 mb-5">
+                        <h1 class="fw-bold mb-3">Crispy & Juicy<br>Fried Chicken</h1>
+                        <p class="mb-4">Enjoy golden, crunchy fried chicken with rich flavor and perfect seasoning — freshly cooked for you.</p>
                         <div>
                             <a href="#" class="btn btn-warning px-4 py-2 me-2 fw-semibold">Order Now</a>
                             <a href="#" class="btn btn-outline-light px-4 py-2 fw-semibold">View Menu</a>

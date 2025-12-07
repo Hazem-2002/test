@@ -5,6 +5,11 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.navbar {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+
 .navbar .navbar-brand {
     font-size: 22px;
     color: #e63909 !important;  
@@ -30,6 +35,7 @@
 }
 
 nav .form-control:focus {
+    border: 1px solid #f9d186 !important;
     box-shadow: 0 0 0 0.15rem rgba(255, 193, 7, .4) !important;
 }
 
@@ -104,7 +110,7 @@ nav .form-control:focus {
     left: 10%;
     transform: translateY(-50%);
     color: #333;
-    max-width: 450px;
+    max-width: 470px;
 }
 
 .custom-caption h1 {
