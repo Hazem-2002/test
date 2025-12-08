@@ -5,9 +5,13 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* --------------------------------------------
+                    Navbar
+---------------------------------------------*/
+
 .navbar {
     backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.1) !important;
+    background: rgba(255, 255, 255, 0.7) !important;
 }
 
 .navbar .navbar-brand {
@@ -23,21 +27,66 @@
 
 .navbar .navbar-nav .nav-link:hover ,
 .navbar .navbar-nav .nav-link.active {
-    color: #ff9c07 !important;  
+    color: #f1a20b !important;  
 }
 
 .navbar .navbar-nav .nav-link:focus {
-    border: 1px solid #ff9c07;
+    border: 1px solid #f1a20b;
 }
 
-.navbar nav .form-control {
+.navbar .custom-menu {
+    min-width: 200px;
+    padding: 8px 0;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+.navbar .custom-menu .dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 18px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #444;
+    transition: 0.25s ease;
+}
+
+.navbar .custom-menu .dropdown-item i {
+    font-size: 17px;
+    color: #ff7b00; 
+    transition: 0.25s ease;
+}
+
+.navbar .custom-menu .dropdown-item:hover {
+    background: linear-gradient(45deg, #ff9c07, #ff4b1f);
+    color: #fff;
+    transform: translateX(4px);
+}
+
+.navbar .custom-menu .dropdown-item:hover i {
+    color: #fff;
+}
+
+.navbar .custom-menu .dropdown-divider {
+    border-top: 1px solid #eee;
+    margin: 6px 0;
+}
+
+.navbar .form-control {
     transition: 0.2s;
 }
 
-nav .form-control:focus {
+.navbar .form-control:focus {
     border: 1px solid #f9d186 !important;
     box-shadow: 0 0 0 0.15rem rgba(255, 193, 7, .4) !important;
 }
+
+/* --------------------------------------------
+                    modal
+---------------------------------------------*/
 
 .modal {
     z-index: 999;
@@ -75,21 +124,41 @@ nav .form-control:focus {
     opacity: 0.85;
 }
 
-/* ////////////////////////////////////////////////////////////////////////// */
+/* --------------------------------------------
+            aside => social-nav
+---------------------------------------------*/
 
-.carousel-inner .carousel-item {
-    background: linear-gradient(to bottom,#ffffff 0%,#ffffff 60%,#f9d186 85%, #f4a52a 100%
-    );
+aside .social-nav{
+    z-index: 1;
+    right: 15px !important;
 }
 
-.carousel-item img{
+aside .social-nav .icon-box {
+    width: 25px;
+    height: 25px;
+    padding: 4px !important;
+    background-color: #f1a20b;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+aside .social-nav .icon-box:hover {
+    background-color: #cf8700;
+    transform: translateX(-5px);
+}
+
+/* ----------------------------------------------
+                    carousel
+-----------------------------------------------*/
+
+main .carousel-inner .carousel-item {
+    background: linear-gradient(to bottom,#ffffff 0%,#ffffff 60%,#f9d186 85%, #f4a52a 100%);
+}
+
+main .carousel-item img{
     animation: fadeIn 2s linear infinite alternate;
-}
-
-.carousel-control-prev i, 
-.carousel-control-next i {
-    color: #ffc107;
-    font-size: 20px;
 }
 
 /* Animation */
@@ -104,7 +173,18 @@ nav .form-control:focus {
     }
 }
 
-.custom-caption {
+main .carousel-control-prev ,
+main .carousel-control-next {
+    max-width: 10% !important;
+}
+
+main .carousel-control-prev i, 
+main .carousel-control-next i {
+    color: #ffc107;
+    font-size: 20px;
+}
+
+main .custom-caption {
     position: absolute;
     top: 50%;
     left: 10%;
@@ -113,38 +193,42 @@ nav .form-control:focus {
     max-width: 470px;
 }
 
-.custom-caption h1 {
+main .custom-caption h1 {
     font-size: 3rem;
     line-height: 1.2;
     color: #ff4b1f; 
 }
 
-.custom-caption p {
+main .custom-caption p {
     font-size: 1.1rem;
     color: #444;
 }
 
-.custom-caption .btn-warning {
+main .custom-caption .btn-warning {
     background: linear-gradient(45deg, #ff9c07, #ff4b1f);
     border: none;
 }
 
-.custom-caption .btn-outline-light {
+main .custom-caption .btn-warning:hover {
+    opacity: 0.85;
+}
+
+main .custom-caption .btn-outline-light {
     border-color: #ff9c07;
     color: #ff9c07;
 }
 
-.custom-caption .btn-outline-light:hover {
+main .custom-caption .btn-outline-light:hover {
     background: #ff9c07;
     color: #fff;
 }
 
 @media (max-width: 992px) {
-    .carousel-inner .carousel-item .container-fluid .row {
+    main .carousel-inner .carousel-item .container-fluid .row {
         transform: translateY(-17%);
     }
 
-    .custom-caption {
+    main .custom-caption {
         position: absolute;
         top: auto;
         left: 50%;
@@ -159,24 +243,25 @@ nav .form-control:focus {
         border: 1px solid rgba(255, 255, 255, 0.25);
     }
 
-    .custom-caption h1 {
+    main .custom-caption h1 {
         font-size: 1.6rem;
         line-height: 1.3;
     }
 
-    .custom-caption p {
+    main .custom-caption p {
         font-size: 0.9rem;
         margin-bottom: 1rem;
     }
 
-    .custom-caption a.btn {
+    main .custom-caption a.btn {
         padding: 6px 14px !important;
         font-size: 0.85rem !important;
     }
+
 }
 
 /* -------------------------------------------
-            Welcome Section Styling
+                Welcome Section 
 ---------------------------------------------*/
 
 .welcome-section {
@@ -186,7 +271,7 @@ nav .form-control:focus {
 }
 
 .welcome-section .title {
-    font-size: 48px;
+    font-size: 38px;
     font-weight: bold;
     color: #e84c20;
     line-height: 1.2;
@@ -212,12 +297,23 @@ nav .form-control:focus {
     color: #444;
 }
 
-.welcome-section .features li i{
+.welcome-section .features li i {
     color: #e84c20;
+    animation: pop 1.2s ease infinite alternate-reverse;
 }
 
-.btn-explore,
-.btn-order {
+.welcome-section .features li:nth-child(2) i { animation-delay: .24s; }
+.welcome-section .features li:nth-child(3) i { animation-delay: 0.48s; }
+.welcome-section .features li:nth-child(4) i { animation-delay: 0.72s; }
+.welcome-section .features li:nth-child(5) i { animation-delay: 0.96s; }
+
+@keyframes pop {
+    0% { transform: scale(0.85); opacity: 0.85; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.welcome-section .btn-explore,
+.welcome-section .btn-order {
     display: inline-block;
     padding: 12px 28px;
     font-size: 16px;
@@ -228,23 +324,23 @@ nav .form-control:focus {
     transition: 0.3s;
 }
 
-.btn-order {
+.welcome-section .btn-order {
     background: #f4b400;
     color: #000;
     border: none;
 }
 
-.btn-order:hover {
+.welcome-section .btn-order:hover {
     background: #e0a200;
 }
 
-.btn-explore {
+.welcome-section .btn-explore {
     background: transparent;
     border: 2px solid #f4b400;
     color: #d98a00;
 }
 
-.btn-explore:hover {
+.welcome-section .btn-explore:hover {
     background: #f4b400;
     color: #fff;
 }
@@ -252,7 +348,7 @@ nav .form-control:focus {
 @media (max-width: 992px) {
 
     .welcome-section .title {
-        font-size: 40px;
+        font-size: 32px;
     }
 
     .welcome-section p {
@@ -263,8 +359,8 @@ nav .form-control:focus {
         font-size: 15px;
     }
 
-    .btn-order,
-    .btn-explore {
+    .welcome-section .btn-order,
+    .welcome-section .btn-explore {
         padding: 10px 24px;
         font-size: 15px;
     }
@@ -273,7 +369,7 @@ nav .form-control:focus {
 @media (max-width: 768px) {
 
     .welcome-section .title {
-        font-size: 34px;
+        font-size: 28px;
         line-height: 1.3;
     }
 
@@ -289,7 +385,7 @@ nav .form-control:focus {
 @media (max-width: 576px) {
 
     .welcome-section .title {
-        font-size: 26px;
+        font-size: 24px;
         line-height: 1.3;
     }
 
@@ -297,10 +393,98 @@ nav .form-control:focus {
         font-size: 14px;
     }
 
-    .btn-order,
-    .btn-explore {
+    .welcome-section .btn-order,
+    .welcome-section .btn-explore {
         padding: 8px 20px;
         font-size: 14px;
         border-radius: 6px;
+    }
+}
+
+/* --------------------------------------------
+                Dishes section
+---------------------------------------------*/
+
+.dishes {
+    background: linear-gradient(to right bottom, #ffffff, #fff6e6);
+    padding: 50px 0;
+}
+
+.dishes .title {
+    font-size: 38px;
+    font-weight: 700;
+    color: #e84c20;
+}
+
+.dishes .lead {
+    color: #6b6b6b;
+    font-size: 16px;
+    text-align: justify;
+}
+
+.dishes .accordion .accordion-item {
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    border: 1px solid #f1f1f1;
+}
+
+.dishes .accordion .accordion-item .accordion-header .accordion-button {
+    font-weight: 600;
+    color: #333;
+    padding: 14px 20px;
+    font-size: 17px !important;
+    box-shadow: none !important;
+}
+
+.dishes .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {
+    color: #e84c20;
+    background: rgba(255, 152, 0, 0.06);
+    box-shadow: none;
+}
+
+.dishes .accordion .accordion-item .accordion-header .accordion-button {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.dishes .accordion .accordion-item .accordion-body p {
+    color: #444;
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.dishes .accordion .accordion-item .accordion-body ul {
+    padding-left: 20px;
+}
+
+.dishes .accordion-body li {
+    margin: 6px 0;
+    color: #555;
+    font-size: 15px;
+}
+
+@media (max-width: 992px) {
+    .dishes .title {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 576px) {
+    .dishes .title {
+        font-size: 20px;
+    }
+
+    .dishes .accordion-body {
+        padding: 16px 18px;
+    }
+
+    .dishes .accordion-body li {
+        font-size: 14px;
+    }
+
+    .dishes .accordion .accordion-item .accordion-header .accordion-button {
+        font-size: 15px !important;
     }
 }
