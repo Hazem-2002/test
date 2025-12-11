@@ -637,7 +637,7 @@ main .custom-caption .btn-outline-light:hover {
 
 .thanks-section {
     padding: 80px 0;
-    background: #fffdf7;
+    background: linear-gradient(to right bottom, #ffffff, #fff6e6);
 }
 
 .thanks-section .container {
@@ -755,5 +755,177 @@ main .custom-caption .btn-outline-light:hover {
 @media (min-width: 1200px) {
     .thanks-section .container {
         width: 70% !important;
+    }
+}
+
+
+/* ///////////////////////////////////// */
+
+.podcast-section {
+    padding: 50px 0;
+    background: #fffdf6;
+}
+
+.podcast-section .section-title {
+    width: fit-content;
+    font-size: 32px;
+    font-weight: 700;
+    color: #e85c1a;
+    padding: 12px 20px;
+    margin-bottom: 50px !important;
+    text-transform: uppercase;
+}
+
+.podcast-section .card {
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.podcast-section .card:hover {
+    box-shadow: 0 6px 14px rgba(217, 119, 6, 0.45) !important;
+}
+
+.podcast-section .card .podcast-card {
+    background: #ffffff;
+    padding: 25px;
+}
+
+.podcast-section .col-12:nth-child(odd) .card .podcast-card {
+    margin: 0 !important;
+    border-left: 5px solid #f4b002;
+}
+
+.podcast-section .col-12:nth-child(even) .card .podcast-card {
+    border-right: 5px solid #f4b002;
+}
+
+.podcast-section .card .podcast-card .podcast-title {
+    color: #d97706;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.podcast-section .card .podcast-card .podcast-date {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 18px;
+}
+
+.podcast-section .card .podcast-card .podcast-desc {
+    line-height: 1.7;
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+.podcast-section .card .podcast-card .podcast-actions .btn {
+    justify-content: start;
+    border-radius: 20px;
+    padding: 7px 18px;
+    font-weight: 600;
+}
+
+.podcast-section .card .podcast-img ,
+.podcast-section .card .podcast-img-sm {
+    transition: 0.5s;
+}
+
+.podcast-section .col-12:nth-child(1) .card .podcast-img ,
+.podcast-section .col-12:nth-child(1) .card .podcast-img-sm {
+    background: url(../images/podcast1.jpg) no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+.podcast-section .col-12:nth-child(2) .card .podcast-img ,
+.podcast-section .col-12:nth-child(2) .card .podcast-img-sm {
+    background: url(../images/podcast2.jpg) no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+.podcast-section .col-12:nth-child(3) .card .podcast-img ,
+.podcast-section .col-12:nth-child(3) .card .podcast-img-sm {
+    background: url(../images/podcast3.jpg) no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+.podcast-section .col-12:nth-child(4) .card .podcast-img ,
+.podcast-section .col-12:nth-child(4) .card .podcast-img-sm {
+    background: url(../images/podcast4.jpg) no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+
+.podcast-section .card .podcast-img {
+    clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 15% 100%);
+}
+
+.podcast-section .card .podcast-img-sm {
+    min-height: 50px !important;
+}
+
+.podcast-section .col-12:nth-child(even) .card .podcast-img {
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+}
+
+.podcast-section .card:hover .podcast-img ,
+.podcast-section .card:hover .podcast-img-sm {
+    transform: scale(1.1);
+}
+
+@media(max-width: 768px) {
+
+    .podcast-section .section-title {
+        font-size: 30px;
+    }
+
+    .card .row {
+        flex-direction: column !important;
+        height: 100vh !important;
+    }
+
+    .card .row .col-md-8 {
+        flex-grow: 0 !important;
+    }
+
+    .card .row .col-md-4 {
+        flex-grow: 1 !important;
+    }
+
+    .podcast-img-sm {
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    .podcast-section .card .podcast-card .podcast-title {
+        font-size: 17px;
+    }
+
+    .podcast-section .card .podcast-card .podcast-date {
+        font-size: 11px;
+    }
+
+    .podcast-section .card .podcast-card .podcast-desc {
+        font-size: 14px;
+    }
+
+    .podcast-section .card .podcast-card .podcast-actions .btn {
+        font-size: 12px;
+        margin-right: 0;
+        padding: 7px 8px;
+    }
+
+    .podcast-section .container {
+        width: 90% !important;
+    }
+}
+
+
+@media (max-width: 576px) {
+
+    .podcast-section .section-title {
+        font-size: 20px;
     }
 }
