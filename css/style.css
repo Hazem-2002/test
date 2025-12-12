@@ -926,7 +926,7 @@ main .custom-caption .btn-outline-light:hover {
     .podcast-section .card .podcast-card .podcast-actions .btn {
         font-size: 12px;
         margin-right: 0;
-        padding: 7px;
+        padding: 7px 9px;
     }
 
     .podcast-section .container {
@@ -1012,6 +1012,17 @@ main .custom-caption .btn-outline-light:hover {
     text-decoration: underline;
 }
 
+@media (max-width: 576px) {
+
+    .subscribe-section .sub-card {
+        padding: 10px 15px;
+    }
+
+    .subscribe-section .title {
+        font-size: 16px;
+    }
+}
+
 @media (max-width: 767px) {
 
     .subscribe-section .container {
@@ -1021,21 +1032,6 @@ main .custom-caption .btn-outline-light:hover {
     .subscribe-section .title {
         font-size: 19px;
         margin-bottom: 40px;
-    }
-}
-
-@media (max-width: 576px) {
-
-    .subscribe-section .container {
-        width: 90% !important;
-    }
-
-    .subscribe-section .sub-card {
-        padding: 10px 15px;
-    }
-
-    .subscribe-section .title {
-        font-size: 16px;
     }
 }
 
