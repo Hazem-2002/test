@@ -94,11 +94,11 @@
 ---------------------------------------------*/
 
 .modal {
-    z-index: 999;
+    z-index: 1026;
 }
 
 .modal-backdrop {
-    z-index: 990;
+    z-index: 1025;
 }
 
 .modal-title {
@@ -134,7 +134,7 @@
 ---------------------------------------------*/
 
 aside .social-nav{
-    z-index: 1024;
+    z-index: 1023;
     right: 15px !important;
 }
 
@@ -158,16 +158,18 @@ aside .social-nav .icon-box:hover {
                     carousel
 -----------------------------------------------*/
 
+main .carousel-inner {
+    z-index: 1023 !important;
+}
+
 main .carousel-inner .carousel-item {
     background: linear-gradient(to bottom,#ffffff 0%,#ffffff 60%,#f9d186 85%, #f4a52a 100%);
-    z-index: 1024 !important;
 }
 
 main .carousel-item img{
     animation: fadeIn 2s linear infinite alternate;
 }
 
-/* Animation */
 @keyframes fadeIn {
     0% {
         opacity: 1;
@@ -182,6 +184,11 @@ main .carousel-item img{
 main .carousel-control-prev ,
 main .carousel-control-next {
     max-width: 10% !important;
+    z-index: 1024 !important;
+}
+
+main .carousel-indicators {
+    z-index: 1024 !important;
 }
 
 main .carousel-control-prev i, 
@@ -743,7 +750,7 @@ main .custom-caption .btn-outline-light:hover {
     opacity: 0.9;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 575px) {
     
     .thanks-section .container {
         width: 75% !important;
@@ -759,7 +766,6 @@ main .custom-caption .btn-outline-light:hover {
         width: 70% !important;
     }
 }
-
 
 /* --------------------------------------------
                 podcast-section 
@@ -881,7 +887,7 @@ main .custom-caption .btn-outline-light:hover {
     transform: scale(1.1);
 }
 
-@media(max-width: 768px) {
+@media(max-width: 767px) {
 
     .podcast-section .section-title {
         font-size: 19px;
@@ -929,7 +935,7 @@ main .custom-caption .btn-outline-light:hover {
 }
 
 
-@media (max-width: 576px) {
+@media (max-width: 575px) {
 
     .podcast-section .section-title {
         font-size: 16px;
@@ -1008,8 +1014,8 @@ main .custom-caption .btn-outline-light:hover {
 
 @media (max-width: 576px) {
 
-    .subscribe-section .container {
-        width: 90%;
+    .subscribe-section .sub-card {
+        padding: 10px 15px;
     }
 
     .subscribe-section .title {
@@ -1017,24 +1023,36 @@ main .custom-caption .btn-outline-light:hover {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+
+    .subscribe-section .container {
+        width: 92% !important;
+    }
+
     .subscribe-section .title {
         font-size: 19px;
+        margin-bottom: 40px;
     }
 }
 
+@media (min-width: 768px) {
+    
+    .subscribe-section .container {
+        width: 95% !important;
+    }
+}
 
 @media (min-width: 992px) {
     
     .subscribe-section .container {
-        width: 70% !important;
+        width: 78% !important;
     }
 }
 
 @media (min-width: 1200px) {
 
     .subscribe-section .container {
-        width: 60% !important;
+        width: 65% !important;
     }
 }
 
