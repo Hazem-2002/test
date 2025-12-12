@@ -505,12 +505,14 @@ main .custom-caption .btn-outline-light:hover {
 }
 
 .menu-section .section-title {
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 700;
     color: #e85c1a;
     padding: 15px;
     margin-bottom: 55px !important;
     text-transform: uppercase;
+    text-shadow: 1px 1px 1px #555;
+    letter-spacing: 0.5px;
 }
 
 .menu-section .menu-card {
@@ -610,7 +612,7 @@ main .custom-caption .btn-outline-light:hover {
     }
 
     .menu-section .section-title {
-        font-size: 30px;
+        font-size: 19px;
     }
     
 }
@@ -622,7 +624,7 @@ main .custom-caption .btn-outline-light:hover {
     }
 
     .menu-section .section-title {
-        font-size: 22px;
+        font-size: 16px;
     }
 
     .menu-section .food-banner {
@@ -759,7 +761,9 @@ main .custom-caption .btn-outline-light:hover {
 }
 
 
-/* ///////////////////////////////////// */
+/* --------------------------------------------
+                podcast-section 
+---------------------------------------------*/
 
 .podcast-section {
     padding: 50px 0;
@@ -768,12 +772,14 @@ main .custom-caption .btn-outline-light:hover {
 
 .podcast-section .section-title {
     width: fit-content;
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 700;
     color: #e85c1a;
+    text-shadow: 1px 1px 1px #555;
     padding: 12px 20px;
-    margin-bottom: 50px !important;
+    margin-bottom: 55px !important;
     text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .podcast-section .card {
@@ -878,7 +884,7 @@ main .custom-caption .btn-outline-light:hover {
 @media(max-width: 768px) {
 
     .podcast-section .section-title {
-        font-size: 30px;
+        font-size: 19px;
     }
 
     .card .row {
@@ -926,6 +932,109 @@ main .custom-caption .btn-outline-light:hover {
 @media (max-width: 576px) {
 
     .podcast-section .section-title {
-        font-size: 20px;
+        font-size: 16px;
     }
 }
+
+/* --------------------------------------------
+                subscribe-section
+---------------------------------------------*/
+
+.subscribe-section {
+    padding: 80px 0;
+    background: linear-gradient(to right top, #ffffff, #fff6e6);
+}
+
+.subscribe-section .container {
+    border: 1px solid #ffc107;
+}
+
+.subscribe-section .subscribe-title {
+    width: fit-content;
+    margin-bottom: 55px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #e85c1a; 
+    text-shadow: 1px 1px 1px #555;
+    letter-spacing: 0.5px;
+}
+
+.subscribe-section .sub-card {
+    width: fit-content;
+    border-radius: 12px;
+    padding: 15px 20px;
+    background: #FFFDF9;
+    text-align: center;
+    border: 1px solid transparent;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: all 0.3s;
+}
+
+.sub-card:hover {
+    transform: translateY(-5px);
+    border: 1px solid #ffc107;
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.22);
+}
+
+.sub-label {
+    color: #444;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.sub-icon {
+    display: block;
+    margin: 0 auto;
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+.sub-link {
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.sub-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 576px) {
+
+    .subscribe-section .container {
+        width: 90%;
+    }
+
+    .subscribe-section .title {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .subscribe-section .title {
+        font-size: 19px;
+    }
+}
+
+
+@media (min-width: 992px) {
+    
+    .subscribe-section .container {
+        width: 70% !important;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .subscribe-section .container {
+        width: 60% !important;
+    }
+}
+
