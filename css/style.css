@@ -753,7 +753,7 @@ main .custom-caption .btn-outline-light:hover {
 @media (max-width: 575px) {
     
     .thanks-section .container {
-        width: 75% !important;
+        width: 80% !important;
     }
 
     .thanks-section .chef-card {
